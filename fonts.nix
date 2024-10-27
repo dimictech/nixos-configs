@@ -5,11 +5,14 @@
     noto-fonts
     noto-fonts-cjk
     noto-fonts-emoji
-    liberation_ttf
+    jetbrains-mono
     fira-code
-    fira-code-symbols
-    mplus-outline-fonts.githubRelease
-    dina-font
-    proggyfonts
+    source-code-pro
+    inconsolata
+    roboto
+    open-sans
+    lato
+    font-awesome
+    powerline-fonts
   ];
 }

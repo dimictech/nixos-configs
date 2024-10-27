@@ -1,23 +1,19 @@
 { config, pkgs, ... }:
 
 {
-  virtualisation.libvirtd = {
-    enable = true;
-    qemu.package = pkgs.qemu_kvm;
-  };
-
+  
   environment.systemPackages = with pkgs; [
     virt-manager
-    bridge-utils
     libvirt
     qemu
+    dnsmasq
+    bridge-utils
   ];
 
-  users.users.petar = {
-    isNormalUser = true;
-    extraGroups = [ "libvirt" "kvm" ];
-  };
+  virtualisation.libvirtd.enable = true;
+  users.users.petar.extraGroups = [ "libvirt" "kvm" ];
+  services.qemuGuest.enable = true;
+  services.spice-vdagentd.enable = true;
 
-  boot.kernelModules = [ "kvm-intel" "kvm-amd" ];
 }
 

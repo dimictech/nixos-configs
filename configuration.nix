@@ -9,8 +9,8 @@
       ./docker.nix
       ./virtualisation.nix
       ./winbox.nix
-      ./bash-aliases.nix
-];
+      ./sh.nix
+    ];
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -35,12 +35,20 @@
     description = "petar";
     extraGroups = [ "networkmanager" "wheel"  ];
     packages = with pkgs; [
-	whatsapp-for-linux
-];
+        temurin-jre-bin-17
+        taskwarrior
+	zsh
+	pfetch
+	gcc
+	clang
+	zig
+	kitty
+	ferdium
+    ];
   };
 
   programs.hyprland.enable = true;
-
+  services.flatpak.enable = true;
   programs.firefox.enable = true;
   nixpkgs.config.allowUnfree = true;
 
@@ -48,7 +56,6 @@
     vim
     wget
     telegram-desktop
-    anydesk
     teamviewer
     remmina
     wine
@@ -75,11 +82,23 @@
     winbox
     obs-studio
     vscode
+    nmap
+    nodejs
+    networkmanager-l2tp
+    neovim
+    ventoy
+    ripgrep
+    fd
   ];
 
   system.stateVersion = "24.05";  # Match this to your NixOS version
   hardware.opengl.enable = true;
   services.xserver.videoDrivers = ["nvidia"];
+  hardware.nvidia.prime = {
+    offload.enable = true;
+    intelBusId = "PCI:0:2:0"; # Replace with your Intel GPU bus ID
+    nvidiaBusId = "PCI:1:0:0"; # Replace with your NVIDIA GPU bus ID
+  };
   hardware.opengl.driSupport = true;
   hardware.opengl.extraPackages = with pkgs; [
     pkgs.libglvnd
@@ -95,7 +114,11 @@
   };
 
   services.teamviewer.enable = true;
- 
+
+  powerManagement.cpuFreqGovernor = "performance";
+  hardware.cpu.intel.updateMicrocode = true;
+  services.thermald.enable = true;
+  boot.kernelParams = [ "intel_pstate=enable" ];
  
 }
 
