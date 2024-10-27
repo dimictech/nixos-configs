@@ -14,6 +14,9 @@
   users.users.petar.extraGroups = [ "libvirt" "kvm" ];
   services.qemuGuest.enable = true;
   services.spice-vdagentd.enable = true;
-
+  virtualisation.virtualbox.host.enable = true;
+  users.extraGroups.vboxusers.members = [ "petar" ];
+  virtualisation.virtualbox.host.enableExtensionPack = true;
+  virtualisation.virtualbox.guest.enable = true;
 }
 
