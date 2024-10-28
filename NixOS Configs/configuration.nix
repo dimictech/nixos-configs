@@ -20,6 +20,7 @@
 
   # System version
   system.stateVersion = "24.05";
+  nixpkgs.config.allowUnsupportedSystem = true;
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;

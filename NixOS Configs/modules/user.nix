@@ -15,9 +15,10 @@
       zig
       qbittorrent
       kitty
-      ferdium
       lutris
       gh
+      zapzap
+      telegram-desktop
     ];
   };
 }
