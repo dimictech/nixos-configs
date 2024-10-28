@@ -18,8 +18,6 @@
       ferdium
       lutris
       gh
-      virtualbox
-      notion-app-enhanced
     ];
   };
 }

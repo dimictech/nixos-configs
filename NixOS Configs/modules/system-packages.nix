@@ -9,7 +9,6 @@
     wine
     pciutils
     pavucontrol
-    pulseaudio
     docker
     gnome.mutter
     gnome.gnome-tweaks
