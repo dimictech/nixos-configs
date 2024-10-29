@@ -19,7 +19,16 @@
       gh
       zapzap
       telegram-desktop
+      teams-for-linux
+      obsidian
+      vlc
+      obs-studio
+      obs-studio-plugins.obs-nvfbc
+      obs-studio-plugins.wlrobs
+      obs-studio-plugins.obs-vkcapture
+      obs-studio-plugins.obs-backgroundremoval
+      github-desktop
+      discord
     ];
   };
 }
-

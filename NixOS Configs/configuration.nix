@@ -9,21 +9,19 @@
     ./virtualisation.nix
     ./winbox.nix
     ./sh.nix
-    ./wifi.nix
     ./modules/user.nix
     ./modules/networking.nix
     ./modules/display.nix
     ./modules/system-packages.nix
     ./modules/services.nix
     ./modules/hardware.nix
+    ./modules/build.nix
   ];
 
-  # System version
   system.stateVersion = "24.05";
+  systemd.services."NetworkManager-wait-online".enable = false;
   nixpkgs.config.allowUnsupportedSystem = true;
-
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  boot.initrd.luks.devices."luks-33c81971-4603-45d6-ad9f-9d372d98abdc".device = "/dev/disk/by-uuid/33c81971-4603-45d6-ad9f-9d372d98abdc";
 }
 

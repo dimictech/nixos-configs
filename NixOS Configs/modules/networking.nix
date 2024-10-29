@@ -1,6 +1,7 @@
 { config, pkgs, ... }:
 
 {
+  networking.nameservers = [ "8.8.8.8" "1.1.1.1" ];
   networking.hostName = "petarws";
   networking.networkmanager.enable = true;
   time.timeZone = "Europe/Belgrade";

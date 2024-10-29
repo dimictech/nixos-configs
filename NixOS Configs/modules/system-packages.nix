@@ -26,7 +26,6 @@
     wdisplays
     winbox
     obs-studio
-    vscode
     nmap
     nodejs
     networkmanager-l2tp
@@ -34,6 +33,7 @@
     ventoy
     ripgrep
     fd
+    gnumake
   ];
 }
 
