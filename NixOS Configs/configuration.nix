@@ -5,7 +5,6 @@
     ./hardware-configuration.nix
     ./audio.nix
     ./fonts.nix
-    ./docker.nix
     ./virtualisation.nix
     ./winbox.nix
     ./sh.nix
@@ -18,6 +17,7 @@
     ./modules/build.nix
   ];
 
+  boot.blacklistedKernelModules = [ "cs35l41-hda" ];
   system.stateVersion = "24.05";
   systemd.services."NetworkManager-wait-online".enable = false;
   nixpkgs.config.allowUnsupportedSystem = true;

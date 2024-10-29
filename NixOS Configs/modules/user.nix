@@ -29,6 +29,9 @@
       obs-studio-plugins.obs-backgroundremoval
       github-desktop
       discord
+      pomodoro-gtk
+      dbeaver-bin
+      steam
     ];
   };
 }

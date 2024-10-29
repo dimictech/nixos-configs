@@ -34,6 +34,7 @@
     ripgrep
     fd
     gnumake
+    mesa
   ];
 }
 
