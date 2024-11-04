@@ -7,6 +7,7 @@
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
       temurin-jre-bin-17
+      openjdk21
       taskwarrior
       zsh
       pfetch
@@ -32,6 +33,18 @@
       pomodoro-gtk
       dbeaver-bin
       steam
+      vmware-workstation
+      gparted
+      nftables
+      firecracker
+      flintlock
+      nmap
+      nuclei
+      filezilla
+      speedtest-cli
+      nettools
+      traceroute
+      ntfs3g
     ];
   };
 }
