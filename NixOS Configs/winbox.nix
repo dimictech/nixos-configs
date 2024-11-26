@@ -1,23 +1,17 @@
 { config, lib, pkgs, ... }:
-
-let
-  cfg  = config.programs.winbox;
-in
 {
-  options.programs.winbox = {
-    package = lib.mkPackageOption pkgs "winbox" { };
-
-    openFirewall = lib.mkOption {
-      description = ''
-        Whether to open ports for the MikroTik Neighbor Discovery protocol. Required for Winbox neighbor discovery.
-      '';
-      default = false;
-      type = lib.types.bool;
-    };
+  networking.firewall = {
+    allowedTCPPorts = [ 80 443 ];
+    allowedUDPPortRanges = [
+      {
+        from = 40000;
+        to = 50000;
+      }
+    ];
   };
-
-  config = lib.mkIf cfg.enable {
-    environment.systemPackages = [ cfg.package ];
-    networking.firewall.allowedUDPPorts = lib.optionals cfg.openFirewall [ 5678 ];
+  programs.winbox = {
+    enable = true;
+    openFirewall = true;
+    package = pkgs.winbox;
   };
 }

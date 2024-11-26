@@ -46,7 +46,6 @@
       twinkle
       veracrypt
       libreoffice
-      winbox4
     ];
   };
   programs.kdeconnect.enable = true;
