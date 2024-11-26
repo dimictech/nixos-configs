@@ -14,11 +14,8 @@
       gcc
       clang
       zig
-      qbittorrent
-      kitty
       lutris
       gh
-      zapzap
       telegram-desktop
       teams-for-linux
       obsidian
@@ -33,7 +30,6 @@
       pomodoro-gtk
       dbeaver-bin
       steam
-      vmware-workstation
       gparted
       nftables
       firecracker
@@ -45,6 +41,13 @@
       nettools
       traceroute
       ntfs3g
+      gtk3
+      gtk3.dev
+      twinkle
+      veracrypt
+      libreoffice
+      winbox4
     ];
   };
+  programs.kdeconnect.enable = true;
 }

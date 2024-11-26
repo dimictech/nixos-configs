@@ -35,6 +35,9 @@
     fd
     gnumake
     mesa
+    pkg-config
+    gtk3
+    gtk3.dev
   ];
 }
 

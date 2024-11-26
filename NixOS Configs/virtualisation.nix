@@ -5,5 +5,6 @@
   users.extraGroups.vboxusers.members = [ "petar" ];
   virtualisation.virtualbox.host.enableExtensionPack = true;
   virtualisation.virtualbox.guest.enable = true;
+  virtualisation.waydroid.enable = true;
 }
 

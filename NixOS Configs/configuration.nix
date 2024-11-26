@@ -16,13 +16,15 @@
     ./modules/hardware.nix
     ./modules/build.nix
   ];
-
-  boot.blacklistedKernelModules = [ "cs35l41-hda" ];
+  boot.kernelPackages = pkgs.linuxPackages_latest;
   system.stateVersion = "24.05";
   systemd.services."NetworkManager-wait-online".enable = false;
   nixpkgs.config.allowUnsupportedSystem = true;
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.grub.configurationLimit = 5;
+  programs.nix-ld.enable = true;
+  programs.nix-ld.libraries = with pkgs; [
+  ];
 }
 
