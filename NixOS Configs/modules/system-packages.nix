@@ -38,6 +38,7 @@
     pkg-config
     gtk3
     gtk3.dev
+    ntfs3g
   ];
 }
 

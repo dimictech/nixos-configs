@@ -15,6 +15,7 @@
     ./modules/services.nix
     ./modules/hardware.nix
     ./modules/build.nix
+    ./modules/fs.nix
   ];
   boot.kernelPackages = pkgs.linuxPackages_latest;
   system.stateVersion = "24.05";
