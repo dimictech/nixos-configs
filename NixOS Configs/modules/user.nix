@@ -46,6 +46,8 @@
       twinkle
       veracrypt
       libreoffice
+      polybar
+      xterm
     ];
   };
   programs.kdeconnect.enable = true;

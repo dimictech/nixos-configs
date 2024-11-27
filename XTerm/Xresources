@@ -1,0 +1,43 @@
+xterm*termName: xterm-256color
+xterm*dynamicColors: true
+xterm*allowColorOps: true
+
+! Font settings
+xterm*faceName: JetBrainsMono Nerd Font   ! Change to any preferred font
+xterm*faceSize: 12                        ! Font size
+
+! Colors
+xterm*background: rgba:1E/1E/2E/CC   ! Dark background with ~80% opacity
+xterm*foreground: #D9E0EE                 ! Light foreground color
+xterm*cursorColor: #FF79C6         ! Cursor color
+xterm*highlightColor: #44475A             ! Highlight (selection) color
+
+! Color scheme
+xterm*color0:  #1E1E2E                    ! Black
+xterm*color1:  #F7768E                    ! Red
+xterm*color2:  #9ECE6A                    ! Green
+xterm*color3:  #E0AF68                    ! Yellow
+xterm*color4:  #7AA2F7                    ! Blue
+xterm*color5:  #BB9AF7                    ! Magenta
+xterm*color6:  #7DCFFF                    ! Cyan
+xterm*color7:  #D9E0EE                    ! White
+xterm*color8:  #414868                    ! Bright Black
+xterm*color9:  #F7768E                    ! Bright Red
+xterm*color10: #9ECE6A                    ! Bright Green
+xterm*color11: #E0AF68                    ! Bright Yellow
+xterm*color12: #7AA2F7                    ! Bright Blue
+xterm*color13: #BB9AF7                    ! Bright Magenta
+xterm*color14: #7DCFFF                    ! Bright Cyan
+xterm*color15: #D9E0EE                    ! Bright White
+
+! Other settings
+xterm*scrollBar: true                     ! Enable scroll bar
+xterm*rightScrollBar: true                ! Place scroll bar on the right
+xterm*saveLines: 1000                     ! Enable scrollback buffer
+xterm*cursorBlink: true                   ! Enable blinking cursor
+
+! Enable Ctrl+Shift+C and Ctrl+Shift+V
+XTerm*vt100.translations: #override \
+    Ctrl Shift <Key>C: exec-formatted("xclip -selection clipboard >/dev/null") \n\
+    Ctrl Shift <Key>V: exec-formatted("xclip -o -selection clipboard | xargs -0 printf")
+
