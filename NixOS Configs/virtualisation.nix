@@ -6,5 +6,9 @@
   virtualisation.virtualbox.host.enableExtensionPack = true;
   virtualisation.virtualbox.guest.enable = true;
   virtualisation.waydroid.enable = true;
+  virtualisation.podman = {
+   enable = true;
+   dockerCompat = true;
+  };
 }
 

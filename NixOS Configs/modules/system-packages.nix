@@ -40,6 +40,9 @@
     gtk3.dev
     ntfs3g
     xclip
+    distrobox
+    boxbuddy
+    timeshift
   ];
 }
 

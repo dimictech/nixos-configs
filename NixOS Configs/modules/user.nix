@@ -48,6 +48,7 @@
       libreoffice
       polybar
       xterm
+      neofetch
     ];
   };
   programs.kdeconnect.enable = true;
