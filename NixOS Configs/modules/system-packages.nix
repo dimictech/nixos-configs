@@ -43,6 +43,8 @@
     distrobox
     boxbuddy
     timeshift
+    starship
+    fzf
   ];
 }
 

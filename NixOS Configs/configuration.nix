@@ -3,11 +3,11 @@
 {
   imports = [
     ./hardware-configuration.nix
-    ./audio.nix
-    ./fonts.nix
-    ./virtualisation.nix
-    ./winbox.nix
-    ./sh.nix
+    ./modules/audio.nix
+    ./modules/fonts.nix
+    ./modules/virtualisation.nix
+    ./modules/winbox.nix
+    ./modules/sh.nix
     ./modules/user.nix
     ./modules/networking.nix
     ./modules/display.nix
