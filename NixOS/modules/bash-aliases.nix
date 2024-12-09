@@ -10,8 +10,8 @@
                 edit = "sudo vim /etc/nixos/configuration.nix";
                 update = "sudo nixos-rebuild switch";
                 adminedit = "sudo code --no-sandbox --user-data-dir /etc/nixos/";
-		cls = "clear"
-		ll = "ls -l"
+		cls = "clear";
+		ll = "ls -l";
             };
         };
 

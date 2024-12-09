@@ -2,6 +2,8 @@
 
 {
   environment.systemPackages = with pkgs; [
+    mutter
+    gnome-tweaks
     vim
     wget
     teamviewer
@@ -10,8 +12,6 @@
     pciutils
     pavucontrol
     docker
-    gnome.mutter
-    gnome.gnome-tweaks
     htop
     zip
     unzip
@@ -45,6 +45,12 @@
     timeshift
     starship
     fzf
+    glib
+    openssl
+    python3
+    conky
+    lm_sensors
+    qemu
   ];
 }
 

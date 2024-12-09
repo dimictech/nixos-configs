@@ -17,9 +17,8 @@
     ./modules/build.nix
     ./modules/fs.nix
   ];
-  boot.kernelPackages = pkgs.linuxPackages_latest;
+  boot.kernelPackages = pkgs.linuxPackages_6_11;
   system.stateVersion = "24.05";
-  systemd.services."NetworkManager-wait-online".enable = false;
   nixpkgs.config.allowUnsupportedSystem = true;
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;

@@ -8,7 +8,7 @@
     packages = with pkgs; [
       temurin-jre-bin-17
       openjdk21
-      taskwarrior
+      taskwarrior3
       zsh
       pfetch
       gcc
@@ -29,7 +29,6 @@
       discord
       pomodoro-gtk
       dbeaver-bin
-      steam
       gparted
       nftables
       firecracker
@@ -49,6 +48,8 @@
       polybar
       xterm
       neofetch
+      inetutils
+      sngrep
     ];
   };
   programs.kdeconnect.enable = true;
