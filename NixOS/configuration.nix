@@ -17,7 +17,7 @@
     ./modules/build.nix
     ./modules/fs.nix
   ];
-  boot.kernelPackages = pkgs.linuxPackages_6_11;
+  boot.kernelPackages = pkgs.linuxPackages_6_12;
   system.stateVersion = "24.05";
   nixpkgs.config.allowUnsupportedSystem = true;
   boot.loader.systemd-boot.enable = true;

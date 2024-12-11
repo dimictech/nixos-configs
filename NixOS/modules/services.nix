@@ -1,6 +1,7 @@
 { config, pkgs, ... }:
 
 {
+  networking.wireguard.enable = true;
   services.printing.enable = true;
   services.flatpak.enable = true;
   programs.firefox.enable = true;

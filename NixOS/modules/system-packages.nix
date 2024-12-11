@@ -5,6 +5,7 @@
     mutter
     gnome-tweaks
     vim
+    jq
     wget
     teamviewer
     remmina
@@ -51,6 +52,27 @@
     conky
     lm_sensors
     qemu
+    i3
+    i3status
+    dmenu
+    i3lock
+    xorg.xrandr
+    konsole
+    i3-gaps
+    mpd
+    rofi
+    polybar
+    flameshot
+    pavucontrol
+    php
+    wireguard-tools
   ];
+  nixpkgs.config = {
+  packageOverrides = pkgs: rec {
+    polybar = pkgs.polybar.override {
+      i3Support = true;
+    };
+  };
+};
 }
 

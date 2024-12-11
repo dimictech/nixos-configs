@@ -14,6 +14,7 @@
     lato
     font-awesome
     powerline-fonts
+    font-awesome
     (nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" "JetBrainsMono"]; })
   ];
 }

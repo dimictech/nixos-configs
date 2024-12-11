@@ -45,7 +45,6 @@
       twinkle
       veracrypt
       libreoffice
-      polybar
       xterm
       neofetch
       inetutils
